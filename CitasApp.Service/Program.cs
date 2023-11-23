@@ -1,3 +1,4 @@
+using CitasApp.Service;
 using CitasApp.Service.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 app.UseHttpsRedirection();
 app.UseAuthentication();
