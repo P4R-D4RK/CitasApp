@@ -33,10 +33,10 @@
       dropdown
     >
       <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle>
-        Bienvenido {{ user.userName | titlecase }}
+        Bienvenido {{ user.username | titlecase }}
       </a>
       <div class="dropdown-menu" *dropdownMenu>
-        <a class="dropdown-item">Perfil</a>
+        <a class="dropdown-item" routerLink="/member/edit">Perfil</a>
         <a class="dropdown-item" (click)="logout()">Salir</a>
       </div>
     </div>
