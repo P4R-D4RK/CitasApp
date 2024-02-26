@@ -14,14 +14,14 @@ import { MembersService } from 'src/app/services/members.service';
   styleUrls: ['./member-edit.component.css'],
 })
 export class MemberEditComponent implements OnInit {
-  // @ViewChild('editForm') editForm: NgForm | undefined;
-  // @HostListener('window:beforeunload', ['$event']) unloadNotification(
-  //   $event: any
-  // ) {
-  //   if (this.editForm?.dirty) {
-  //     $event.returnValue = true;
-  //   }
-  // }
+  @ViewChild('editForm') editForm: NgForm | undefined;
+  @HostListener('window:beforeunload', ['$event']) unloadNotification(
+    $event: any
+  ) {
+    if (this.editForm?.dirty) {
+      $event.returnValue = true;
+    }
+  }
   member: IMember | undefined;
   user: User | null = null;
 
@@ -46,12 +46,13 @@ export class MemberEditComponent implements OnInit {
     });
   }
 
-  // updateMember() {
-  //   this.membersService.updateMember(this.editForm?.value).subscribe({
-  //     next: (_:any) => {
-  //       this.toastr.success('Se ha actualizado tu perfil');
-  //       this.editForm?.reset(this.member);
-  //     },
-  //   });
-  // }
+  updateMember() {
+    // this.membersService.updateMember(this.editForm?.value).subscribe({
+      // next: (_:any) => {
+    console.log(this.member);
+    this.toastr.success('Se ha actualizado tu perfil');
+    this.editForm?.reset(this.member);
+      // },
+    // });
+  }
 }
