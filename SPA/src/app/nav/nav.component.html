@@ -36,7 +36,7 @@
         Bienvenido {{ user.username | titlecase }}
       </a>
       <div class="dropdown-menu" *dropdownMenu>
-        <a class="dropdown-item" routerLink="/member/edit">Perfil</a>
+        <a class="dropdown-item" routerLink="/members-edit">Perfil</a>
         <a class="dropdown-item" (click)="logout()">Salir</a>
       </div>
     </div>
@@ -52,7 +52,7 @@
         [(ngModel)]="model.username"
         class="form-control me-2"
         type="text"
-        placeholder="Username"
+        placeholder="username"
       />
       <input
         name="password"

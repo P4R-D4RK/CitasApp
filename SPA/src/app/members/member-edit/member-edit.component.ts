@@ -2,8 +2,9 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs';
+import { User } from 'src/app/interfaces/user.interface';
 import { IMember } from 'src/app/models/member.interface';
-import { IUser } from 'src/app/models/user.interface';
+// import { IUser } from 'src/app/models/user.interface';
 import { AccountService } from 'src/app/services/account.service';
 import { MembersService } from 'src/app/services/members.service';
 
@@ -13,16 +14,16 @@ import { MembersService } from 'src/app/services/members.service';
   styleUrls: ['./member-edit.component.css'],
 })
 export class MemberEditComponent implements OnInit {
-  @ViewChild('editForm') editForm: NgForm | undefined;
-  @HostListener('window:beforeunload', ['$event']) unloadNotification(
-    $event: any
-  ) {
-    if (this.editForm?.dirty) {
-      $event.returnValue = true;
-    }
-  }
+  // @ViewChild('editForm') editForm: NgForm | undefined;
+  // @HostListener('window:beforeunload', ['$event']) unloadNotification(
+  //   $event: any
+  // ) {
+  //   if (this.editForm?.dirty) {
+  //     $event.returnValue = true;
+  //   }
+  // }
   member: IMember | undefined;
-  user: IUser | null = null;
+  user: User | null = null;
 
   constructor(
     private accountService: AccountService,
@@ -30,7 +31,7 @@ export class MemberEditComponent implements OnInit {
     private toastr: ToastrService
   ) {
     this.accountService.currentUser$.pipe(take(1)).subscribe({
-      next: (user) => (this.user = user),
+      next: (user) => this.user = user
     });
   }
 
@@ -40,18 +41,17 @@ export class MemberEditComponent implements OnInit {
 
   loadMember(): void {
     if (!this.user) return;
-
     this.membersService.getMember(this.user.username).subscribe({
-      next: (member) => (this.member = member),
+      next: (member) => this.member = member
     });
   }
 
-  updateMember() {
-    this.membersService.updateMember(this.editForm?.value).subscribe({
-      next: (_) => {
-        this.toastr.success('Se ha actualizado tu perfil');
-        this.editForm?.reset(this.member);
-      },
-    });
-  }
+  // updateMember() {
+  //   this.membersService.updateMember(this.editForm?.value).subscribe({
+  //     next: (_:any) => {
+  //       this.toastr.success('Se ha actualizado tu perfil');
+  //       this.editForm?.reset(this.member);
+  //     },
+  //   });
+  // }
 }

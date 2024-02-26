@@ -1,6 +1,6 @@
 [
     {
-      "UserName": "Scorpion2",
+      "Username": "Scorpion2",
       "Gender": "male",
       "DateOfBirth": "1993-01-02",
       "KnownAs": "Scorpion2",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "UserName": "Sub-Zero",
+      "Username": "Sub-Zero",
       "Gender": "male",
       "DateOfBirth": "1982-08-17",
       "KnownAs": "Sub-Zero",
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "UserName": "Raiden",
+      "Username": "Raiden",
       "Gender": "male",
       "DateOfBirth": "1995-05-06",
       "KnownAs": "Raiden",
@@ -57,7 +57,7 @@
       ]
     },
     {
-      "UserName": "Reptile",
+      "Username": "Reptile",
       "Gender": "male",
       "DateOfBirth": "1962-05-14",
       "KnownAs": "Reptile",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "UserName": "Mileena",
+      "Username": "Mileena",
       "Gender": "female",
       "DateOfBirth": "1994-11-02",
       "KnownAs": "Mileena",
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "UserName": "Kung Lao",
+      "Username": "Kung Lao",
       "Gender": "male",
       "DateOfBirth": "1953-01-01",
       "KnownAs": "Kung Lao",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "UserName": "Goro",
+      "Username": "Goro",
       "Gender": "male",
       "DateOfBirth": "1986-02-15",
       "KnownAs": "Goro",
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "UserName": "Baraka",
+      "Username": "Baraka",
       "Gender": "male",
       "DateOfBirth": "1991-11-10",
       "KnownAs": "Baraka",
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "UserName": "Sonya Blade",
+      "Username": "Sonya Blade",
       "Gender": "female",
       "DateOfBirth": "1984-05-26",
       "KnownAs": "Sonya Blade",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "UserName": "Kitana",
+      "Username": "Kitana",
       "Gender": "female",
       "DateOfBirth": "1983-07-16",
       "KnownAs": "Kitana",

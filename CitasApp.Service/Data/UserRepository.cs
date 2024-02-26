@@ -21,7 +21,7 @@ public class UserRepository : IUserRepository
     public async Task<MemberDto> GetMemberAsync(string username)
     {
         return await _context.Users
-            .Where(x => x.UserName == username)
+            .Where(x => x.Username == username)
             .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
             .SingleOrDefaultAsync();
     }
@@ -42,7 +42,7 @@ public class UserRepository : IUserRepository
     {
         return await _context.Users
             .Include(p => p.Photos)
-            .SingleOrDefaultAsync(u => u.UserName == username);
+            .SingleOrDefaultAsync(u => u.Username == username);
     }
 
     public async Task<IEnumerable<AppUser>> GetUsersAsync()

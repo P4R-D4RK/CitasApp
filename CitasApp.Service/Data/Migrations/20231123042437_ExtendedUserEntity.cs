@@ -12,7 +12,7 @@ namespace CitasApp.Service.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "UserName",
+                name: "Username",
                 table: "Users",
                 type: "TEXT",
                 nullable: true,
@@ -173,7 +173,7 @@ namespace CitasApp.Service.Data.Migrations
                 table: "Users");
 
             migrationBuilder.AlterColumn<string>(
-                name: "UserName",
+                name: "Username",
                 table: "Users",
                 type: "TEXT",
                 nullable: false,

@@ -1,5 +1,6 @@
 <div class="row" *ngIf="member">
-    <div class="col-4">
+    <h1>{{member.username}}</h1>
+    <!-- <div class="col-4">
         <h1>Tu perfil</h1>
     </div>
     <div class="col-8">
@@ -34,9 +35,9 @@
                     class="btn btn-success col-12">Guardar</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="col-8">
+    <!-- <div class="col-8">
         <tabset class="member-tabset">
             <tab heading="Acerca de {{member.knownAs}}">
                 <form #editForm="ngForm" id="editForm" (ngSubmit)="updateMember()">
@@ -71,5 +72,5 @@
                 <p>¡Aquí pondremos las fotos en un futuro!</p>
             </tab>
         </tabset>
-    </div>
+    </div> -->
 </div>

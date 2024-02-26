@@ -17,14 +17,14 @@ namespace CitasApp.Service.Data.Migrations
             migrationBuilder.RenameColumn(
                 name: "Username",
                 table: "Users",
-                newName: "UserName");
+                newName: "Username");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "UserName",
+                name: "Username",
                 table: "Users",
                 newName: "Username");
 

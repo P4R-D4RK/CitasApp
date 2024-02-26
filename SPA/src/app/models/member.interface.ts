@@ -2,7 +2,7 @@ import { IPhoto } from "./photo.interface";
 
 export interface IMember {
     id: number;
-    userName: string;
+    username: string;
     photoUrl: string;
     age: number;
     knownAs: string;
