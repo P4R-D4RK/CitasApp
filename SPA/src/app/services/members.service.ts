@@ -4,20 +4,22 @@ import { IMember } from '../models/member.interface';
 import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MembersService {
   baseUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getMembers() {
-    return this.http.get<IMember[]>(this.baseUrl + "users");
+    return this.http.get<IMember[]>(this.baseUrl + 'users');
   }
 
   getMember(username: string) {
-    console.log(username);
-    this.http.get<IMember>(this.baseUrl + "users/" + username).subscribe(resp => console.log(resp));
-    return this.http.get<IMember>(this.baseUrl + "users/" + username);
+    return this.http.get<IMember>(this.baseUrl + 'users/' + username);
+  }
+
+  updateMember(member: IMember) {
+    return this.http.put(this.baseUrl + 'users', member);
   }
 }
